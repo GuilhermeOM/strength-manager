@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "Home",
+      "href": "#home"
+    },
+    {
+      "id": 1,
+      "name": "Trainings",
+      "href": "#trainings"
+    },
+    {
+      "id": 2,
+      "name": "Diet",
+      "href": "#diet"
+    }
+  ]
+}
