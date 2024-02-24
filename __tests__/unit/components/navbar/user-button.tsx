@@ -1,5 +1,5 @@
 import { fireEvent, render } from '@testing-library/react';
-import UserButton from '@/components/Navbar/UserButton';
+import UserButton from '@/components/navbar/user-button';
 import '@testing-library/jest-dom';
 
 describe('UserButton', () => {

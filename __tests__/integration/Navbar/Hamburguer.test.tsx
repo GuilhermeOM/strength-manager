@@ -1,5 +1,5 @@
 import { fireEvent, render } from '@testing-library/react';
-import Hamburguer from '@/components/Navbar/Hamburguer';
+import Hamburguer from '@/components/navbar/hamburguer';
 import '@testing-library/jest-dom';
 
 describe('Hamburguer', () => {

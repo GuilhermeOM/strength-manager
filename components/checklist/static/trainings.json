@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "Barbell bench press",
+      "documented": true
+    },
+    {
+      "id": 1,
+      "name": "Incline barbell bench press",
+      "documented": true
+    },
+    {
+      "id": 2,
+      "name": "Cross over",
+      "documented": false
+    },
+    {
+      "id": 3,
+      "name": "Parallel tricep dips",
+      "documented": false
+    },
+    {
+      "id": 4,
+      "name": "Cable french press",
+      "documented": false
+    },
+    {
+      "id": 5,
+      "name": "Skull crusher",
+      "documented": false
+    }
+  ]
+}
