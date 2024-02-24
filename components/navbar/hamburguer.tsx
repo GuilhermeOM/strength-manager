@@ -5,6 +5,26 @@ import { FaBars, FaBarsStaggered } from 'react-icons/fa6';
 import navigations from './static/navigations.json';
 import Link from 'next/link';
 import UserButton from './user-button';
+import { AnimatePresence, motion } from 'framer-motion';
+
+interface AnimatedDivProps {
+  children: JSX.Element[];
+}
+
+function AnimatedDiv({ children }: AnimatedDivProps) {
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0 }}
+        className='h-screen w-screen mt-4 p-4 rounded-t-xl fixed left-0 bg-[rgb(var(--background-rgb))] shadow-[0px_0px_24px_1px_#00000024]'
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+}
 
 export default function Hamburguer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +43,7 @@ export default function Hamburguer() {
       </button>
 
       {isOpen && (
-        <div className='h-screen w-screen mt-4 p-4 rounded-t-xl fixed left-0 bg-[rgb(var(--background-rgb))] shadow-[0px_0px_24px_1px_#00000024]'>
+        <AnimatedDiv>
           <section className='px-2 right-0 flex items-center justify-center'>
             <UserButton />
           </section>
@@ -46,7 +66,7 @@ export default function Hamburguer() {
               ))}
             </ul>
           </nav>
-        </div>
+        </AnimatedDiv>
       )}
     </div>
   );
