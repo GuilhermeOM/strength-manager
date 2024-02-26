@@ -3,8 +3,11 @@
 import { useEffect, useState } from 'react';
 import { TbCheck, TbZzz } from 'react-icons/tb';
 import { useChecklistContext } from '@/contexts/checklist-context';
-import staticTrainings from './static/trainings.json';
 import Modal from '../modal';
+import LineChart from '../charts/line-chart';
+
+import staticTrainings from './static/trainings.json';
+import staticModalChartData from './static/modal-chart-data.json';
 
 export default function Checklist() {
   const { trainingDay } = useChecklistContext();
@@ -53,9 +56,13 @@ export default function Checklist() {
       </ul>
 
       <Modal isOpen={isModalOpen} setIsOpen={setIsModalOpen}>
-        <form className='min-w-80 min-h-80 px-4 pb-4 pt-8'>
-          <p>test</p>
-        </form>
+        <div className='min-w-80 min-h-80 px-4 pb-4 pt-8 flex items-center justify-center'>
+          <div className='w-60 h-60'>
+            <LineChart series={staticModalChartData.data} />
+          </div>
+
+          <form></form>
+        </div>
       </Modal>
     </>
   );
